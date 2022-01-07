@@ -5,6 +5,7 @@
 package com.mycompany.fileio;
 
 import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 /**
  *
@@ -21,8 +22,13 @@ public class FileIO {
         // BufferedWriter Object
         // Add import java.io.BufferedWriter
         // But still complains about constructor
+        //
+        // third lab adds constructor and FileWriter Object
+        // add import for FileWriterS
+        // and also add filename with no path
+        // but still errors
         
-        BufferedWriter writer = new BufferedWriter();
+        BufferedWriter writer = new BufferedWriter(new FileWriter("myfile.txt"));
         
     }
     
