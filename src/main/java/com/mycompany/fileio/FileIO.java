@@ -37,10 +37,21 @@ public class FileIO {
             // and
             // add the writer.close() method to save the file
             
+            // fifth lab add a second line
+            // and
+            // a path to filename
+            
+            // sixth lab add names in file from an array
+            
           
+            String[] months = {"January","February","March"};
 
-            BufferedWriter writer = new BufferedWriter(new FileWriter("myfile.txt"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("C:\\Users\\Spyros\\Documents\\myfile.txt"));
             writer.write("my first data");
+            writer.write("\na second line of data");
+            for (String m: months ){
+                writer.write("\n"+m);
+            }
             writer.close();
             
         } catch (IOException ex) {
