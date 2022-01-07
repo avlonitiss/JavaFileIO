@@ -4,7 +4,10 @@
  */
 package com.mycompany.fileio;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -42,6 +45,8 @@ public class FileIO {
             // a path to filename
             
             // sixth lab add names in file from an array
+            //
+            // seventh lab read file with BufferedReader and FileReader Objects
             
           
             String[] months = {"January","February","March"};
@@ -59,6 +64,12 @@ public class FileIO {
             ex.printStackTrace();
         }
         
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Spyros\\Documents\\myfile.txt"));
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(FileIO.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }
