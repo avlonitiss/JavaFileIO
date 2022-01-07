@@ -52,7 +52,11 @@ public class FileIO {
           // eighth lab print readed data with .readLine() method
           // and add second catch excpetion
           // and reader.close
-            
+          
+          // ninth lab read rest of file with a while loop
+          // and
+          // pay attention not to initialize readLine() outside the loop
+          // because it will print only the first line forever
           
             String[] months = {"January","February","March"};
 
@@ -72,7 +76,11 @@ public class FileIO {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Spyros\\Documents\\myfile.txt"));
             System.out.println("the file data are: \n");
-            System.out.println(reader.readLine());
+            
+            String line;
+            while((line = reader.readLine())!= null){
+                System.out.println(line);
+            }
             reader.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(FileIO.class.getName()).log(Level.SEVERE, null, ex);
