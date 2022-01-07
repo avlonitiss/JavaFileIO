@@ -48,6 +48,11 @@ public class FileIO {
             //
             // seventh lab read file with BufferedReader and FileReader Objects
             
+          //
+          // eighth lab print readed data with .readLine() method
+          // and add second catch excpetion
+          // and reader.close
+            
           
             String[] months = {"January","February","March"};
 
@@ -66,8 +71,12 @@ public class FileIO {
         
         try {
             BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Spyros\\Documents\\myfile.txt"));
-            
+            System.out.println("the file data are: \n");
+            System.out.println(reader.readLine());
+            reader.close();
         } catch (FileNotFoundException ex) {
+            Logger.getLogger(FileIO.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
             Logger.getLogger(FileIO.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
